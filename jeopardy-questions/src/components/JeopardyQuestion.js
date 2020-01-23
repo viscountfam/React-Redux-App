@@ -13,13 +13,14 @@ import { fetchActivity } from '../actions'
             {props.isLoading && (
                 <Loader
                  type="Puff"
-                 color="#00BFFF"
+                 color="gold"
                  height={100}
                  width={100}
-                 timeout={100000}
+                 timeout={3000}
                  />
             )}
-            {props.question && !props.isLoading && <h2>{props.question.question}</h2>}
+            {/* {props.question && !props.isLoading && <h2>{props.question.question}</h2>} */}
+            {props.question && !props.isLoading && <h2>{props.question[0].question}</h2>}
         </div>
     );
 };
